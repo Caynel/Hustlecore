@@ -5,133 +5,50 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title></title>
 
-        <!-- FOR EXTERNAL CSS
-         <link rel="stylesheet" href=""> 
-         -->
-
-         <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-
-            body {
-                font-family: 'Arial', sans-serif;
-                background-color: #fff;
-                color: #000;
-                line-height: 1.6;
-            }
-
-            .mainCont {
-                max-width: 1200px;
-                margin: auto;
-                padding: 2rem;
-                text-align: center;
-            }
-
-            .title {
-                font-size: 2rem;
-                font-weight: bold;
-                margin-bottom: 2rem;
-            }
-
-            .cardClassCont {
-                display: flex;
-                justify-content: center;
-                gap: 1.5rem;
-                flex-wrap: wrap;
-            }
-
-            .cardClass {
-                background-color: #D9D9D9;
-                border-radius: 12px;
-                padding: 1rem;
-                width: 280px;
-                text-align: left;
-                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            }
-
-            .cardClassImg {
-                width: 100%;
-                border-radius: 8px;
-                margin-bottom: 1rem;
-            }
-
-            .cardClassTitle {
-                font-size: 1.2rem;
-                font-weight: bold;
-                margin-bottom: 0.5rem;
-                color: #696969;
-            }
-
-            .cardPrice {
-                font-weight: bold;
-                color: #11162C;
-            }
-
-            .cardClassDetails {
-                list-style: none;
-                margin-bottom: 1rem;
-            }
-
-            .cardText {
-                margin-left: 1.7rem;
-            }
-
-            .enrollBtn {
-                background-color:  #007BFF;
-                color: #fff;
-                padding: 0.5rem 1rem;
-                border: none;
-                border-radius: 6px;
-                cursor: pointer;
-                margin:10px;
-                margin-left: 0;
-            }
-
-            .enrollBtn:hover {
-                background-color: #DC6C06;
-            }
-
-            .moreLink {
-                margin-top: 2rem;
-                margin-bottom: 4rem;
-                font-weight: bold;
-                color: #000;
-                text-decoration: none;
-                display: block;
-                text-align: center;
-            }
-
-            .moreLink:hover {
-                text-decoration: underline;
-                color: #DC6C06;
-            }
-
-            hr {
-                color: #696969;
-                margin: 1rem 0;
-            }
-
-         </style>
+        <!-- FOR EXTERNAL CSS -->
+         <link rel="stylesheet" href="projectStyles.css"> 
+        
     </head>
     <body>
-        <div class="navigation">
+        <header>
+            <div class="upperNav">
+                <a class="logo" href="Homepage.php"><img src="images/logo.jpg" alt="Logo" /></a>
+                <div>
+                    <!-- PROFILE/ACC -->
+                    <a class="profileUpperNav" href="Profile.php">
+                        <img src="images/profile.png" alt="Default Icon">Profile
+                    </a>
 
-        </div>
-        <div class="mainCont">
+                    <!-- LOGOUT -->
+                    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                        <button type="submit" name="logout">Log out</button>
+                    </form>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Homepage.php">Home</a></li>
+                    <li><a href="Classes&essions.php">Classes & Sessions</a></li>
+                    <li><a href="EnrolledClasses.php">Enrolled Classes</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- WRAPPER -->
+        <div class="wrapper"> </div>
+        
+        <!-- MAIN CONTENT -->
+        <main class="mainCont">
             <h1 class="title">SELECT MEMBERSHIP PLAN</h1>
         
-            <div class="cardClassCont">
+            <section class="cardClassCont">
                 <!-- CARD 1 -->
-                <div class="cardClass">
+                <div class="cardClass cardMembers">
                     <div class="cardClassInfo">
                         <h2 class="cardClassTitle">Monthly Membership</h2>
-                        <h1 class="cardPrice">₱1000.00</h1>
-                        <button class="enrollBtn">Apply Now →</button>
+                        <h1>₱1000.00</h1>
                         <hr>
-                        <ul class="cardClassDetails">
+                        <ul class="cardClassDetails cardMembersDetails">
                             <li>✅ Best for: 
                                 <p class="cardText">
                                     Casual gym-goers, travelers, or those testing the waters.
@@ -139,64 +56,62 @@
                             </li>
                             <li>
                                 ✨ Perks: 
-                                <p class="cardText">
-                                    Basic access to equipment, group classes, and locker rooms.
-                                </p>
+                                <ul class="cardPerks">
+                                    <li>Basic access to equipment, group classes, and locker rooms.</li>
+                                </ul>
                             </li>
-                        </ul>
+                        </ul>       
+                        <button class="enrollBtn">Apply Now →</button>
                     </div>
                 </div>
 
                 <!-- CARD 2 -->
-                <div class="cardClass">
+                <div class="cardClass cardMembers">
                     <div class="cardClassInfo">
                         <h2 class="cardClassTitle">Quarterly Membership</h2>
-                        <h1 class="cardPrice">₱2500.00</h1>
-                        <button class="enrollBtn">Apply Now →</button>
+                        <h1>₱2500.00</h1>
                         <hr>
-                        <ul class="cardClassDetails">
+                        <ul class="cardClassDetails cardMembersDetails">
                             <li>✅ Best for: 
                                 <p class="cardText">
                                     Those who want to commit for a few months without a long-term contract.
                                 </p>
                             </li>
                             <li>
-                                ✨ Perks: 
-                                <p class="cardText">
-                                    Basic access to equipment, group classes, and locker rooms.
-                                    Plus free personal training session and nutrition consultation.
-                                </p> 
+                                ✨ Perks:
+                                <ul class="cardPerks">
+                                    <li>Includes perks from the monthly plan.</li>
+                                    <li>Free personal training session and nutrition consultation.</li>
+                                </ul>
                             </li>
                         </ul>
+                        <button class="enrollBtn">Apply Now →</button>
                     </div>
                 </div>
 
                 <!-- CARD 3 -->
-                <div class="cardClass">
-                    <div class="cardClassInfo">
+                <div class="cardClass cardMembers">
+                    <div class="cardClassInfo" >
                         <h2 class="cardClassTitle">Annual Membership</h2>
-                        <h1 class="cardPrice">₱8000.00</h1>
-                        <button class="enrollBtn">Apply Now →</button>
+                        <h1>₱8000.00</h1>
                         <hr>
-                        <ul class="cardClassDetails">
-                            <li>✅ Best for:
-                                <p class="cardText">
-                                    Dedicated fitness enthusiasts or those serious about their health journey.
-                                </p>
-                            </li>
-                            <li>
-                                ✨ Perks: 
-                                <p class="cardText">
-                                    Basic access to equipment, group classes, and locker rooms.
-                                    Plus free personal training session and nutrition consultation.
-                                    Free exclusive gym merchandise and VIP access to special events.
-                                </p>
+                        <ul class="cardClassDetails cardMembersDetails">
+                            <li>✅ Best for: Dedicated fitness enthusiasts or those serious about their health journey.</li>
+                            <li>✨ Perks: 
+                                <ul class="cardPerks">
+                                    <li>Includes perks from the monthly and quarterly plans.</li>
+                                    <li> Free exclusive gym merchandise and VIP access to special events.</li>
+                                </ul>
                             </li>
                         </ul>
+                        <button class="enrollBtn">Apply Now →</button>
                     </div>
                 </div>
-            </div>
+            </section>
+        </main>
+        <div class="planSkip">
+            <a class="moreLink" href="Homepage.php">Skip for now ➡️</a>
         </div>
-        <a class="moreLink" href="Homepage.php">Skip for now ➡️</a>
+       
     </body>
 </html>
