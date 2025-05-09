@@ -87,5 +87,36 @@
                 </div>
             </section>
          </main>
+         <footer>
+            <div class="leftFooter">
+                <div class="footerDescrip">
+                    <a class="logo" href="Homepage.php"><img src="images/logo.jpg" alt="Logo" /></a>
+                    <p>
+                        <span>Hustlecore</span> is a fitness community that empowers individuals to achieve their 
+                        health and wellness goals through innovative training programs, 
+                        expert coaching, and a supportive environment.
+                    </p>
+                </div>
+                <p class="copyright">&copy; 2025 All rights reserved. <span>HustleCore</span></p> 
+            </div>
+            <div class="middleFooter">
+                    <h4>Sitemap</h4>
+                    <ul>
+                        <li><a href="Homepage.php">Home</a></li>
+                        <li><a href="Classes&essions.php">Classes & Sessions</a></li>
+                        <li><a href="EnrolledClasses.php">Enrolled Classes</a></li>
+                        <li><a href="Profile.php">Profile</a></li>
+                    </ul>
+            </div>
+            <div class="rightFooter">
+                <h4>Created by:</h4>
+                <ul>
+                    <li>Dagoy, Cyra U.</li>
+                    <li>Duran, Chava</li>
+                    <li>Porol, Ecie Jean</li>
+                </ul>
+            </div>
+
+        </footer>
     </body>
 </html>
